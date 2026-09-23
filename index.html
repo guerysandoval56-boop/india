@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Comercial, Protocolo & Potencial Exportador: Bolivia - India</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1A2B4C;      /* Azul Marino Ejecutivo */
+            --accent: #D97706;       /* Dorado / Naranja Safran */
+            --bg-light: #F4F6F8;     /* Fondo Gris Neutro */
+            --text-dark: #2C3E50;
+            --white: #FFFFFF;
+            --green: #059669;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        /* HEADER / NAVBAR */
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(26, 43, 76, 0.88), rgba(26, 43, 76, 0.88)), 
+                        url('https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1600&q=80') center/cover;
+            color: var(--white);
+            padding: 90px 5% 70px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 850px;
+            margin: 0 auto 30px;
+            color: #E2E8F0;
+        }
+
+        .btn-cta {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.4);
+            margin: 5px;
+        }
+
+        .btn-cta:hover {
+            background-color: #B45309;
+            transform: translateY(-2px);
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.1rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 70px;
+            height: 4px;
+            background-color: var(--accent);
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #64748B;
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+
+        /* METRICS GRID */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .metric-card {
+            background: var(--white);
+            padding: 25px 18px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent);
+        }
+
+        .metric-card i {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .metric-card h3 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .metric-card p {
+            color: #64748B;
+            font-size: 0.9rem;
+        }
+
+        /* PRODUCTS GRID */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .product-body {
+            padding: 20px;
+        }
+
+        .product-body h3 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background-color: #FEF3C7;
+            color: #92400E;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        /* PROTOCOL CALLOUTS */
+        .protocol-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .protocol-container { grid-template-columns: 1fr; }
+        }
+
+        .callout-box {
+            background-color: var(--white);
+            padding: 25px;
+            border-left: 6px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .callout-box h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+        }
+
+        .callout-list {
+            list-style: none;
+        }
+
+        .callout-list li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 22px;
+            font-size: 0.95rem;
+        }
+
+        .callout-list li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* TABLES */
+        .table-container {
+            margin-bottom: 50px;
+        }
+
+        .table-title {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 8px 8px 0 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            background: var(--white);
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.88rem;
+        }
+
+        th {
+            background-color: #2D3748;
+            color: var(--white);
+            padding: 12px 15px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        tr:nth-child(even) {
+            background-color: #F8FAFC;
+        }
+
+        .highlight-val {
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 40px 5% 20px;
+            text-align: center;
+            margin-top: 50px;
+            border-top: 4px solid var(--accent);
+        }
+
+        footer p {
+            color: #94A3B8;
+            font-size: 0.85rem;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-building-columns"></i>
+            <span>INDIA</span> COMMERCE
+        </div>
+        <nav>
+            <a href="#perfil">Perfil Económico</a>
+            <a href="#oferta">Oferta India</a>
+            <a href="#protocolo">Protocolo</a>
+            <a href="#potencial">Potencial Explotable</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Portal Comercial & Potencial Exportador: Bolivia - India</h1>
+        <p>Guía ejecutiva de negocios, protocolo cultural e inteligencia de mercado basada en la Demanda de India y la Oferta Exportable de Bolivia.</p>
+        <a href="#potencial" class="btn-cta"><i class="fa-solid fa-chart-pie"></i> Ver Oportunidades ($797M USD)</a>
+        <a href="#protocolo" class="btn-cta" style="background-color: transparent; border: 2px solid var(--accent);"><i class="fa-solid fa-handshake"></i> Claves Culturales</a>
+    </section>
+
+    <!-- PERFIL ECONÓMICO -->
+    <section id="perfil" class="container">
+        <h2 class="section-title">Perfil Económico de India</h2>
+        <p class="section-subtitle">Panorama general de la 5.ª economía mundial y centro neurálgico del comercio global.</p>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <i class="fa-solid fa-users"></i>
+                <h3>+1.400 M</h3>
+                <p>Habitantes (País más poblado del mundo)</p>
+            </div>
+            <div class="metric-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>~6,5%</h3>
+                <p>Crecimiento PIB Anual Estimado</p>
+            </div>
+            <div class="metric-card">
+                <i class="fa-solid fa-city"></i>
+                <h3>Mumbai / Delhi</h3>
+                <p>Ejes Financieros y Comerciales</p>
+            </div>
+            <div class="metric-card">
+                <i class="fa-solid fa-sack-dollar"></i>
+                <h3>USD 797 M</h3>
+                <p>Potencial Exportador Sin Explotar Total</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFERTA COMERCIAL DE INDIA -->
+    <section id="oferta" style="background-color: #EDF2F7; padding: 50px 0;">
+        <div class="container">
+            <h2 class="section-title">Oferta Comercial e Importaciones desde India</h2>
+            <p class="section-subtitle">Principales sectores industriales que India ofrece a Bolivia y al mundo.</p>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&q=80" alt="Vehículos" class="product-img">
+                    <div class="product-body">
+                        <span class="product-badge">39,5% (USD 72,0 M)</span>
+                        <h3>Vehículos y Autopartes</h3>
+                        <p>Líder global en vehículos comerciales, tractores, repuestos e ingeniería automotriz de alta durabilidad.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="Farmacéutica" class="product-img">
+                    <div class="product-body">
+                        <span class="product-badge">18,3% (USD 33,4 M)</span>
+                        <h3>Industria Farmacéutica</h3>
+                        <p>"La farmacia del mundo": Proveedor masivo de medicamentos genéricos, vacunas e insumos médicos activos.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Maquinaria" class="product-img">
+                    <div class="product-body">
+                        <span class="product-badge">11,7% (USD 21,3 M)</span>
+                        <h3>Maquinaria y Calderas</h3>
+                        <p>Equipamiento industrial, reactores y soluciones mecánicas impulsadas por la iniciativa "Make in India".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROTOCOLO Y CULTURA DE NEGOCIACIÓN -->
+    <section id="protocolo" class="container">
+        <h2 class="section-title">Protocolo y Cultura Empresarial</h2>
+        <p class="section-subtitle">Normas fundamentales de etiqueta y negociación para el mercado indio.</p>
+
+        <div class="protocol-container">
+            <div class="callout-box">
+                <h3><i class="fa-solid fa-hand-holding-heart" style="color:var(--accent);"></i> Etiquetas & Saludo</h3>
+                <ul class="callout-list">
+                    <li><strong>El Saludo (Namaste):</strong> Manos unidas a la altura del pecho. El apretón de manos formal es aceptado en negocios.</li>
+                    <li><strong>Tarjetas de Presentación:</strong> Entregar y recibir siempre con la mano derecha o ambas manos.</li>
+                    <li><strong>Relationship Building:</strong> La confianza mutua personal antecede a las firmas de contratos.</li>
+                    <li><strong>Concepto "Jugaad":</strong> Valoración de la flexibilidad e innovación ingeniosa para resolver imprevistos.</li>
+                </ul>
+            </div>
+
+            <div class="callout-box" style="border-left-color: #1A2B4C;">
+                <h3><i class="fa-solid fa-comments" style="color:var(--primary);"></i> Tácticas y Respeto Cultural</h3>
+                <ul class="callout-list">
+                    <li><strong>Comunicación Indirecta:</strong> Se evita el "no" directo. Respuestas como "lo analizaremos" indican cautela.</li>
+                    <li><strong>Regateo Estructurado:</strong> La primera propuesta es el inicio; se esperan concesiones paulatinas.</li>
+                    <li><strong>Temas Sensibles:</strong> Evitar política, religión, disputas territoriales y el sistema de castas.</li>
+                    <li><strong>Consideraciones Gastronómicas:</strong> Priorizar opciones vegetarianas; la carne de res está prohibida para los hindúes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATOS DEL EXCEL: POTENCIALIDADES -->
+    <section id="potencial" class="container">
+        <h2 class="section-title">Análisis de Potencial Comercial (Datos Reales)</h2>
+        <p class="section-subtitle">Oportunidades de exportación boliviana identificadas según la Demanda de India y la Oferta Nacional (Cifras en USD).</p>
+
+        <!-- TABLA 1: DEMANDA DE INDIA -->
+        <div class="table-container">
+            <div class="table-title">
+                <i class="fa-solid fa-file-import"></i> 1. Potencial Exportador Según la Demanda de la India
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Potencial Exportación</th>
+                            <th>Potencial Sin Explotar</th>
+                            <th>Importaciones de India</th>
+                            <th>Arancel India</th>
+                            <th>Competencia Principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Aceite de soja, en bruto</strong></td>
+                            <td>USD 552.000.000</td>
+                            <td class="highlight-val">USD 552.000.000</td>
+                            <td>USD 4.300.000.000</td>
+                            <td>10%</td>
+                            <td>Argentina, Brasil, EE.UU.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aceite crudo de girasol / cártamo</strong></td>
+                            <td>USD 47.000.000</td>
+                            <td class="highlight-val">USD 47.000.000</td>
+                            <td>USD 2.900.000.000</td>
+                            <td>17,5%</td>
+                            <td>Ucrania, Rusia, Argentina</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Urea</strong></td>
+                            <td>USD 17.000.000</td>
+                            <td class="highlight-val">USD 17.000.000</td>
+                            <td>USD 3.400.000.000</td>
+                            <td>0%</td>
+                            <td>Omán, Qatar, Arabia Saudita</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Desperdicios y desechos de aluminio</strong></td>
+                            <td>USD 9.400.000</td>
+                            <td class="highlight-val">USD 9.200.000</td>
+                            <td>USD 3.400.000.000</td>
+                            <td>2,5%</td>
+                            <td>EE.UU., Reino Unido, Alemania</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Desechos y chatarra de hierro/acero</strong></td>
+                            <td>USD 7.300.000</td>
+                            <td class="highlight-val">USD 7.200.000</td>
+                            <td>USD 2.700.000.000</td>
+                            <td>0%</td>
+                            <td>EE.UU., Reino Unido, Japón</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Minerales y concentrados de cobre</strong></td>
+                            <td>USD 3.400.000</td>
+                            <td class="highlight-val">USD 3.400.000</td>
+                            <td>USD 3.100.000.000</td>
+                            <td>0%</td>
+                            <td>Perú, Chile, Australia</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cátodos de cobre</strong></td>
+                            <td>USD 1.600.000</td>
+                            <td class="highlight-val">USD 1.600.000</td>
+                            <td>USD 1.900.000.000</td>
+                            <td>5%</td>
+                            <td>Chile, Japón, Perú</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Almendras con cáscara</strong></td>
+                            <td>USD 377.000</td>
+                            <td class="highlight-val">USD 377.000</td>
+                            <td>USD 952.000.000</td>
+                            <td>10%</td>
+                            <td>EE.UU., Australia, EAU</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Desechos de acero inoxidable</strong></td>
+                            <td>USD 308.000</td>
+                            <td class="highlight-val">USD 207.000</td>
+                            <td>USD 1.700.000.000</td>
+                            <td>0%</td>
+                            <td>Alemania, EE.UU., Países Bajos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Oro en bruto (no monetario)</strong></td>
+                            <td>USD 729.000.000</td>
+                            <td>USD 0 (Consolidado)</td>
+                            <td>USD 41.000.000.000</td>
+                            <td>10%</td>
+                            <td>Suiza, EAU, China</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- TABLA 2: OFERTA BOLIVIANA -->
+        <div class="table-container">
+            <div class="table-title" style="background-color: var(--accent);">
+                <i class="fa-solid fa-file-export"></i> 2. Potencial Exportador Según la Oferta Boliviana
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Potencial Exportación</th>
+                            <th>Potencial Sin Explotar</th>
+                            <th>Exportaciones Totales Bolivia</th>
+                            <th>Arancel India</th>
+                            <th>Competencia Principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Estaño en bruto</strong></td>
+                            <td>USD 48.000.000</td>
+                            <td class="highlight-val">USD 48.000.000</td>
+                            <td>USD 479.000.000</td>
+                            <td>0%</td>
+                            <td>Indonesia, Perú, China</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Boratos y ácido bórico naturales</strong></td>
+                            <td>USD 32.000.000</td>
+                            <td class="highlight-val">USD 28.000.000</td>
+                            <td>USD 88.000.000</td>
+                            <td>2,5%</td>
+                            <td>Turquía, Argentina, Chile</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Minerales de antimonio y concentrados</strong></td>
+                            <td>USD 8.100.000</td>
+                            <td class="highlight-val">USD 7.300.000</td>
+                            <td>USD 19.000.000</td>
+                            <td>0%</td>
+                            <td>Australia, Rusia, China</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Minerales de volframio (tungsteno)</strong></td>
+                            <td>USD 688.000</td>
+                            <td class="highlight-val">USD 688.000</td>
+                            <td>USD 35.000.000</td>
+                            <td>0%</td>
+                            <td>Australia, España, Rusia</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cascos para sombreros de fieltro</strong></td>
+                            <td>USD 228.000</td>
+                            <td class="highlight-val">USD 228.000</td>
+                            <td>USD 17.000.000</td>
+                            <td>10%</td>
+                            <td>China, Portugal, Bangladesh</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Harina de habas de soja</strong></td>
+                            <td>USD 150.000</td>
+                            <td class="highlight-val">USD 150.000</td>
+                            <td>USD 47.000.000</td>
+                            <td>30%</td>
+                            <td>EE.UU., Países Bajos, Sudáfrica</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cereales, nep (ej. Quinua)</strong></td>
+                            <td>USD 122.000</td>
+                            <td class="highlight-val">USD 122.000</td>
+                            <td>USD 74.000.000</td>
+                            <td>--</td>
+                            <td>Perú, EE.UU., Polonia</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nueces del Brasil (Castaña) sin cáscara</strong></td>
+                            <td>USD 70.000</td>
+                            <td class="highlight-val">USD 70.000</td>
+                            <td>USD 159.000.000</td>
+                            <td>30%</td>
+                            <td>Perú, Brasil, Alemania</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Minerales de zinc y concentrados</strong></td>
+                            <td>USD 56.000</td>
+                            <td class="highlight-val">USD 56.000</td>
+                            <td>USD 1.300.000</td>
+                            <td>2,5%</td>
+                            <td>Perú, Australia, EE.UU.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nueces del Brasil (Castaña) con cáscara</strong></td>
+                            <td>USD 20.000</td>
+                            <td class="highlight-val">USD 20.000</td>
+                            <td>USD 1.600.000</td>
+                            <td>30%</td>
+                            <td>Brasil, EAU, EE.UU.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="logo" style="justify-content: center; margin-bottom: 10px;">
+            <i class="fa-solid fa-building-columns"></i>
+            <span>INDIA</span> COMMERCE
+        </div>
+        <p>Fuentes: Guía Sectorial de Comercio Exterior e Inteligencia de Mercado | Matriz de Potencialidades Comerciales (ITC Trade Map / UN Comtrade)</p>
+        <p>&copy; 2026 - Portal Comercial e Inteligencia de Negocios</p>
+    </footer>
+
+</body>
+</html>
